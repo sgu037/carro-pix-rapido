@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import carHeroBg from "@/assets/car-hero-bg.jpg";
+import carHeroBg from "@/assets/car-front.jpg";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -25,9 +25,9 @@ const Hero = () => {
           backdropFilter: 'blur(20px)'
         }}
       >
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 font-outfit leading-tight">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 font-outfit leading-relaxed">
           Venda seu carro com 
-          <span className="text-gradient block mt-2">segurança</span>
+          <span className="text-gradient block mt-2 leading-relaxed">segurança</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-muted-foreground mb-12 font-outfit max-w-3xl mx-auto leading-relaxed">
           Receba via PIX em até 30 minutos. IPVA 2025 quitado. Sem leilão, sem sinistro.
