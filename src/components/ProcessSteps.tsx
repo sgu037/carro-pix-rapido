@@ -25,23 +25,26 @@ const ProcessSteps = () => {
   ];
 
   return (
-    <section className="bg-background py-16 px-4">
+    <section className="py-20 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step) => (
-            <Card key={step.number} className="bg-secondary border-border shadow-elegant hover:shadow-gold transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="text-3xl font-bold text-primary mb-3 font-outfit">
-                  {step.number}.
+        <h2 className="text-4xl font-bold text-center text-gradient font-outfit mb-16">
+          Como funciona
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, index) => (
+            <div key={step.number} className="glass p-8 rounded-2xl shadow-modern border border-border/30 hover:shadow-gold-glow transition-all duration-500 group">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-gold rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground font-outfit shadow-gold-glow group-hover:scale-110 transition-transform duration-300">
+                  {step.number}
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-3 font-outfit">
+                <h3 className="text-xl font-bold text-foreground mb-4 font-outfit">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground font-outfit text-sm">
+                <p className="text-muted-foreground font-outfit leading-relaxed">
                   {step.description}
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

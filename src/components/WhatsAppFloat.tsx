@@ -7,14 +7,14 @@ const WhatsAppFloat = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-8 right-8 z-50">
       <Button
         variant="whatsapp"
         size="icon-lg"
         onClick={openWhatsApp}
-        className="shadow-elegant animate-bounce hover:animate-none"
+        className="shadow-modern animate-float hover:scale-110 transition-all duration-300"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-8 h-8" />
       </Button>
     </div>
   );

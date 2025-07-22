@@ -8,50 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark vehicle sales theme */
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+    /* Modern dark theme with glassmorphism */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
     
-    --card: 0 0% 10%;
+    --card: 0 0% 8%;
     --card-foreground: 0 0% 95%;
     
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
     
-    /* Golden accent for CTAs */
-    --primary: 51 100% 50%;
+    /* Modern golden gradient */
+    --primary: 45 100% 60%;
     --primary-foreground: 0 0% 0%;
     
-    --secondary: 0 0% 15%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 95%;
     
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 65%;
     
-    --accent: 51 100% 50%;
+    --accent: 45 100% 60%;
     --accent-foreground: 0 0% 0%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 0 0% 20%;
-    --input: 0 0% 6%;
-    --ring: 51 100% 50%;
+    --border: 0 0% 18%;
+    --input: 0 0% 8%;
+    --ring: 45 100% 60%;
     
-    --radius: 0.75rem;
+    --radius: 1rem;
     
-    /* Premium gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(51 100% 50%), hsl(45 100% 45%));
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 5%), hsl(0 0% 8%));
-    --gradient-section: linear-gradient(180deg, hsl(0 0% 10%), hsl(0 0% 6%));
+    /* Modern gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(0 0% 8%) 50%, hsl(0 0% 3%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 60%) 0%, hsl(35 100% 55%) 50%, hsl(45 100% 65%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 20% / 0.1) 0%, hsl(0 0% 30% / 0.05) 100%);
     
-    /* Shadows */
-    --shadow-gold: 0 10px 40px -10px hsl(51 100% 50% / 0.3);
-    --shadow-elegant: 0 4px 20px hsl(0 0% 0% / 0.5);
+    /* Modern shadows */
+    --shadow-modern: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-gold-glow: 0 0 50px hsl(45 100% 60% / 0.3);
+    --shadow-glass: inset 0 1px 0 hsl(0 0% 100% / 0.1);
     
-    /* Animation */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Glassmorphism */
+    --glass-bg: hsl(0 0% 15% / 0.2);
+    --glass-border: hsl(0 0% 100% / 0.1);
+    --glass-blur: blur(20px);
+    
+    /* Modern animations */
+    --animation-float: float 3s ease-in-out infinite;
+    --animation-glow: glow 2s ease-in-out infinite alternate;
   }
+}
 }
 
 @layer base {
@@ -62,4 +70,30 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px hsl(45 100% 60% / 0.2); }
+  100% { box-shadow: 0 0 40px hsl(45 100% 60% / 0.4); }
 }

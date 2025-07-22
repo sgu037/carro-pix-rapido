@@ -18,8 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        gold: "bg-gradient-gold text-primary-foreground font-bold hover:bg-primary/90 shadow-gold transition-all duration-300 rounded-full",
-        whatsapp: "bg-[#25D366] text-white hover:bg-[#20B759] rounded-full",
+        gold: "bg-gradient-gold text-primary-foreground font-bold hover:shadow-gold-glow transition-all duration-500 rounded-full animate-glow",
+        whatsapp: "bg-[#25D366] text-white hover:bg-[#20B759] rounded-full shadow-modern hover:shadow-gold-glow transition-all duration-300",
+        glass: "glass text-foreground hover:bg-gradient-gold hover:text-primary-foreground transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

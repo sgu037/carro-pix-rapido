@@ -48,77 +48,78 @@ Aguardo proposta!`;
   };
 
   return (
-    <section id="form" className="bg-gradient-section py-16 px-4">
-      <div className="container mx-auto max-w-md">
-        <Card className="bg-card border-border shadow-elegant">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-bold text-primary font-outfit">
-              Faça sua avaliação agora
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <Input
-                name="name"
-                placeholder="Seu nome"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-                className="bg-input border-border text-foreground font-outfit"
-              />
-              <Input
-                name="whatsapp"
-                type="tel"
-                placeholder="Seu WhatsApp"
-                value={formData.whatsapp}
-                onChange={handleInputChange}
-                required
-                className="bg-input border-border text-foreground font-outfit"
-              />
-              <Input
-                name="brand"
-                placeholder="Marca e modelo"
-                value={formData.brand}
-                onChange={handleInputChange}
-                required
-                className="bg-input border-border text-foreground font-outfit"
-              />
-              <Input
-                name="year"
-                placeholder="Ano e versão"
-                value={formData.year}
-                onChange={handleInputChange}
-                required
-                className="bg-input border-border text-foreground font-outfit"
-              />
-              <Input
-                name="plate"
-                placeholder="Placa"
-                value={formData.plate}
-                onChange={handleInputChange}
-                required
-                className="bg-input border-border text-foreground font-outfit"
-              />
-              <Input
-                name="mileage"
-                type="number"
-                placeholder="KM atual"
-                value={formData.mileage}
-                onChange={handleInputChange}
-                required
-                className="bg-input border-border text-foreground font-outfit"
-              />
-              <Button 
-                type="submit" 
-                variant="gold" 
-                size="lg" 
-                className="w-full font-outfit"
-              >
-                ENVIAR PARA AVALIAÇÃO
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+    <section id="form" className="py-20 px-4 relative">
+      <div className="container mx-auto max-w-lg relative z-10">
+        <div className="glass p-8 rounded-3xl shadow-modern border border-border/30">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gradient font-outfit mb-2">
+              Faça sua avaliação
+            </h2>
+            <p className="text-muted-foreground font-outfit">
+              Preencha os dados e receba sua proposta
+            </p>
+          </div>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <Input
+              name="name"
+              placeholder="Seu nome"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
+            />
+            <Input
+              name="whatsapp"
+              type="tel"
+              placeholder="Seu WhatsApp"
+              value={formData.whatsapp}
+              onChange={handleInputChange}
+              required
+              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
+            />
+            <Input
+              name="brand"
+              placeholder="Marca e modelo"
+              value={formData.brand}
+              onChange={handleInputChange}
+              required
+              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
+            />
+            <Input
+              name="year"
+              placeholder="Ano e versão"
+              value={formData.year}
+              onChange={handleInputChange}
+              required
+              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
+            />
+            <Input
+              name="plate"
+              placeholder="Placa"
+              value={formData.plate}
+              onChange={handleInputChange}
+              required
+              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
+            />
+            <Input
+              name="mileage"
+              type="number"
+              placeholder="KM atual"
+              value={formData.mileage}
+              onChange={handleInputChange}
+              required
+              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
+            />
+            <Button 
+              type="submit" 
+              variant="gold" 
+              size="lg" 
+              className="w-full font-outfit h-14 text-lg rounded-xl shadow-gold-glow hover:scale-105 transition-all duration-300"
+            >
+              ENVIAR PARA AVALIAÇÃO
+            </Button>
+          </form>
+        </div>
       </div>
     </section>
   );
