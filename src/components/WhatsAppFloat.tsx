@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
 
 const WhatsAppFloat = () => {
   const openWhatsApp = () => {
@@ -14,7 +13,7 @@ const WhatsAppFloat = () => {
         onClick={openWhatsApp}
         className="shadow-modern animate-float hover:scale-110 transition-all duration-300"
       >
-        <MessageCircle className="w-8 h-8" />
+        <img src="/lovable-uploads/4aedadf1-0584-4f49-a3b9-6543044be4ec.png" alt="WhatsApp" className="w-8 h-8" />
       </Button>
     </div>
   );
