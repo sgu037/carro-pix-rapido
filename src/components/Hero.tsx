@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import carHeroBg from "@/assets/car-hero-bg.jpg";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -9,7 +10,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-hero px-4 overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-hero px-4 overflow-hidden mt-8">
+      {/* Car background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{ backgroundImage: `url(${carHeroBg})` }}
+      ></div>
       {/* Floating particles effect */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-float"></div>
