@@ -25,22 +25,22 @@ const ProcessSteps = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 md:py-20 px-4">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gradient font-outfit mb-16">
+        <h2 className="text-2xl md:text-4xl font-bold text-center text-gradient font-outfit mb-8 md:mb-16">
           Como funciona
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {steps.map((step, index) => (
-            <div key={step.number} className="glass p-8 rounded-2xl shadow-modern border border-border/30 hover:shadow-gold-glow transition-all duration-500 group">
+            <div key={step.number} className="glass p-4 md:p-8 rounded-xl md:rounded-2xl shadow-modern border border-border/30 hover:shadow-gold-glow transition-all duration-500 group">
               <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-gold rounded-full flex items-center justify-center text-2xl font-bold text-primary-foreground font-outfit shadow-gold-glow group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 md:mb-6 bg-gradient-gold rounded-full flex items-center justify-center text-lg md:text-2xl font-bold text-primary-foreground font-outfit shadow-gold-glow group-hover:scale-110 transition-transform duration-300">
                   {step.number}
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4 font-outfit">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-3 md:mb-4 font-outfit">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground font-outfit leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground font-outfit leading-relaxed">
                   {step.description}
                 </p>
               </div>
