@@ -13,9 +13,12 @@ const Hero = () => {
     <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-hero px-4 overflow-hidden mt-8">
       {/* Car background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
         style={{ backgroundImage: `url(${carHeroBg})` }}
       ></div>
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
       {/* Floating particles effect */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-float"></div>
