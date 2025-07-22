@@ -19,10 +19,12 @@ const Hero = () => {
       </div>
       
       <div 
-        className="glass p-8 md:p-12 rounded-3xl max-w-5xl mx-auto text-center relative z-10 shadow-modern bg-cover bg-center bg-no-repeat"
+        className="glass p-6 md:p-12 rounded-3xl max-w-5xl mx-auto text-center relative z-10 shadow-modern bg-cover bg-center bg-no-repeat min-h-[400px] md:min-h-auto"
         style={{ 
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${carHeroBg})`,
-          backdropFilter: 'blur(20px)'
+          backdropFilter: 'blur(20px)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center'
         }}
       >
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 font-outfit leading-relaxed">
