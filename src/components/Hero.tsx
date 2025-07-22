@@ -11,14 +11,6 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-hero px-4 overflow-hidden mt-8">
-      {/* Car background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
-        style={{ backgroundImage: `url(${carHeroBg})` }}
-      ></div>
-      
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40"></div>
       {/* Floating particles effect */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-float"></div>
@@ -26,7 +18,13 @@ const Hero = () => {
         <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-primary rounded-full animate-float" style={{animationDelay: '2s'}}></div>
       </div>
       
-      <div className="glass p-8 md:p-12 rounded-3xl max-w-5xl mx-auto text-center relative z-10 shadow-modern">
+      <div 
+        className="glass p-8 md:p-12 rounded-3xl max-w-5xl mx-auto text-center relative z-10 shadow-modern bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${carHeroBg})`,
+          backdropFilter: 'blur(20px)'
+        }}
+      >
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8 font-outfit leading-tight">
           Venda seu carro com 
           <span className="text-gradient block mt-2">segurança</span>
