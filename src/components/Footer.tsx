@@ -9,9 +9,11 @@ const Footer = () => {
               alt="718 Logo" 
               className="h-8 w-auto animate-float"
             />
-            <div className="text-xl font-bold text-gradient font-outfit">
-              Compro Seu Veículo
-            </div>
+            <img 
+              src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
+              alt="Compro Seu Veículo" 
+              className="h-16 w-auto"
+            />
           </div>
           
           <div className="space-y-3 text-muted-foreground font-outfit">

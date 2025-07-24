@@ -10,9 +10,9 @@ const Header = () => {
               className="h-12 w-auto animate-float"
             />
             <img 
-              src="/lovable-uploads/ddc52ad1-cb33-48e7-80fc-8498ab8f881d.png" 
+              src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
               alt="Compro Seu Veículo" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </div>
           <div className="hidden md:block text-sm text-muted-foreground font-outfit">
