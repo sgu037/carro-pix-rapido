@@ -1,19 +1,17 @@
 const Footer = () => {
   return (
-    <footer className="glass border-t border-border/30 py-16 px-4 backdrop-blur-glass">
+    <footer className="glass border-t border-border/30 py-12 px-4 backdrop-blur-glass">
       <div className="container mx-auto text-center">
         <div className="glass p-8 rounded-2xl shadow-modern border border-border/20 max-w-2xl mx-auto">
-          <div className="flex justify-center items-center gap-4 mb-6">
+          <div className="flex justify-center items-center gap-3 mb-6">
             <img 
               src="/lovable-uploads/5b60a498-8415-4aa4-8f8a-6768c4fc04ca.png" 
               alt="718 Logo" 
-              className="h-8 w-auto animate-float"
+              className="h-6 w-auto animate-float"
             />
-            <img 
-              src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
-              alt="Compro Seu Veículo" 
-              className="h-32 w-auto"
-            />
+            <div className="text-3xl font-bold text-gradient font-outfit tracking-wide">
+              Compro $ Veículo
+            </div>
           </div>
           
           <div className="space-y-3 text-muted-foreground font-outfit">
