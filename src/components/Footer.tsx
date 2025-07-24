@@ -3,16 +3,11 @@ const Footer = () => {
     <footer className="glass border-t border-border/30 py-12 px-4 backdrop-blur-glass">
       <div className="container mx-auto text-center">
         <div className="glass p-8 rounded-2xl shadow-modern border border-border/20 max-w-2xl mx-auto">
-          <div className="flex justify-center items-center gap-3 mb-6">
+          <div className="flex justify-center items-center mb-6">
             <img 
-              src="/lovable-uploads/5b60a498-8415-4aa4-8f8a-6768c4fc04ca.png" 
-              alt="718 Logo" 
-              className="h-8 w-auto animate-float flex-shrink-0"
-            />
-            <img 
-              src="/lovable-uploads/d068ac10-29d1-472e-8743-5be6f9d5d446.png" 
+              src="/lovable-uploads/cfc3074a-b5f2-4580-b6fb-650659c525a6.png" 
               alt="Compro Seu Veículo" 
-              className="h-16 w-auto flex-shrink-0 max-w-none"
+              className="h-16 w-auto animate-float"
             />
           </div>
           
