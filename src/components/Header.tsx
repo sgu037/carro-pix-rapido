@@ -5,13 +5,15 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <img 
-              src="/lovable-uploads/3be203fc-a060-4607-a7e1-3d09d9ffdb57.png" 
+              src="/lovable-uploads/5b60a498-8415-4aa4-8f8a-6768c4fc04ca.png" 
               alt="718 Logo" 
               className="h-12 w-auto animate-float"
             />
-            <div className="text-2xl font-bold text-gradient font-outfit">
-              Compro Seu Veículo
-            </div>
+            <img 
+              src="/lovable-uploads/ddc52ad1-cb33-48e7-80fc-8498ab8f881d.png" 
+              alt="Compro Seu Veículo" 
+              className="h-8 w-auto"
+            />
           </div>
           <div className="hidden md:block text-sm text-muted-foreground font-outfit">
             Venda com segurança e rapidez

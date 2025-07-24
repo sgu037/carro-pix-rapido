@@ -2,11 +2,11 @@ import { CheckCircle } from "lucide-react";
 
 const Highlights = () => {
   const highlights = [
-    "IPVA 2025 quitado",
-    "Pagamento via PIX em até 30 minutos", 
-    "Sem exposição em leilão",
-    "Atendimento online e presencial",
-    "Transferência imediata e segura"
+    "Ipva ou Parcelas em Atraso.",
+    "Pagamento Via Pix em Até 30 Minutos.", 
+    "Sem Exposição em Leilão.",
+    "Atendimento Online e Presencial.",
+    "Transferência Imediata e Segura."
   ];
 
   return (
