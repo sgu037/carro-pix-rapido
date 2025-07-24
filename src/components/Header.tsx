@@ -7,10 +7,10 @@ const Header = () => {
             <img 
               src="/lovable-uploads/5b60a498-8415-4aa4-8f8a-6768c4fc04ca.png" 
               alt="718 Logo" 
-              className="h-8 w-auto animate-float flex-shrink-0"
+              className="h-10 w-auto animate-float flex-shrink-0"
             />
             <img 
-              src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
+              src="/lovable-uploads/a42dcc4a-0256-4236-b60b-249e21f143f6.png" 
               alt="Compro Seu Veículo" 
               className="h-16 w-auto flex-shrink-0 max-w-none"
             />
