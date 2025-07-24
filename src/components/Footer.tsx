@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="glass p-8 rounded-2xl shadow-modern border border-border/20 max-w-2xl mx-auto">
           <div className="flex justify-center items-center mb-6">
             <img 
-              src="/lovable-uploads/cfc3074a-b5f2-4580-b6fb-650659c525a6.png" 
+              src="/lovable-uploads/128393d7-4259-4879-a62a-055f7a4d400f.png" 
               alt="Compro Seu Veículo" 
               className="h-16 w-auto animate-float"
             />
