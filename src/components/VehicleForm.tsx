@@ -33,8 +33,22 @@ const VehicleForm = () => {
     fetch('/api/conversion', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: formData.whatsapp })
-    }).catch(console.error);
+      body: JSON.stringify({
+        nome: formData.name,
+        whatsapp: formData.whatsapp,
+        marca: formData.brand,
+        anoVersao: formData.year,
+        placa: formData.plate,
+        km: formData.mileage
+      })
+    })
+    .then(response => response.json())
+    .then(result => {
+      console.log('Evento enviado com sucesso:', result);
+    })
+    .catch(error => {
+      console.error('Erro ao enviar evento:', error);
+    });
     
     // Create WhatsApp message
     const message = `Olá! Gostaria de vender meu veículo:
