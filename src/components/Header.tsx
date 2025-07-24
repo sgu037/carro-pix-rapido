@@ -12,7 +12,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/d068ac10-29d1-472e-8743-5be6f9d5d446.png" 
               alt="Compro Seu Veículo" 
-              className="h-14 w-auto flex-shrink-0 max-w-none"
+              className="h-18 w-auto flex-shrink-0 max-w-none"
             />
           </div>
           <div className="hidden md:block text-sm text-muted-foreground font-outfit">
