@@ -10,9 +10,9 @@ const Header = () => {
               className="h-10 w-auto animate-float flex-shrink-0"
             />
             <img 
-              src="/lovable-uploads/a42dcc4a-0256-4236-b60b-249e21f143f6.png" 
+              src="/lovable-uploads/458b2ee4-8cfb-438a-a3b7-f7c018f55e66.png" 
               alt="Compro Seu Veículo" 
-              className="h-16 w-auto flex-shrink-0 max-w-none"
+              className="h-18 w-auto flex-shrink-0 max-w-none"
             />
           </div>
           <div className="hidden md:block text-sm text-muted-foreground font-outfit">
