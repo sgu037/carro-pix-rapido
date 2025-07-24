@@ -7,12 +7,12 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/3be203fc-a060-4607-a7e1-3d09d9ffdb57.png" 
               alt="718 Logo" 
-              className="h-8 w-auto animate-float"
+              className="h-12 w-auto animate-float"
             />
             <img 
               src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
               alt="Compro Seu Veículo" 
-              className="h-16 w-auto"
+              className="h-24 w-auto"
             />
           </div>
           

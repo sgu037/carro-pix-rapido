@@ -7,12 +7,12 @@ const Header = () => {
             <img 
               src="/lovable-uploads/5b60a498-8415-4aa4-8f8a-6768c4fc04ca.png" 
               alt="718 Logo" 
-              className="h-12 w-auto animate-float"
+              className="h-16 w-auto animate-float"
             />
             <img 
               src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
               alt="Compro Seu Veículo" 
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
           </div>
           <div className="hidden md:block text-sm text-muted-foreground font-outfit">
