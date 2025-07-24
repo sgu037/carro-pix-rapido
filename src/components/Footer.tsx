@@ -5,14 +5,14 @@ const Footer = () => {
         <div className="glass p-8 rounded-2xl shadow-modern border border-border/20 max-w-2xl mx-auto">
           <div className="flex justify-center items-center gap-4 mb-6">
             <img 
-              src="/lovable-uploads/3be203fc-a060-4607-a7e1-3d09d9ffdb57.png" 
+              src="/lovable-uploads/5b60a498-8415-4aa4-8f8a-6768c4fc04ca.png" 
               alt="718 Logo" 
-              className="h-12 w-auto animate-float"
+              className="h-8 w-auto animate-float"
             />
             <img 
               src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
               alt="Compro Seu Veículo" 
-              className="h-24 w-auto"
+              className="h-32 w-auto"
             />
           </div>
           
