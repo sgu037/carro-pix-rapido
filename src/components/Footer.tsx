@@ -7,11 +7,13 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/5b60a498-8415-4aa4-8f8a-6768c4fc04ca.png" 
               alt="718 Logo" 
-              className="h-6 w-auto animate-float"
+              className="h-6 w-auto animate-float flex-shrink-0"
             />
-            <div className="text-3xl font-bold text-gradient font-outfit tracking-wide">
-              Compro $ Veículo
-            </div>
+            <img 
+              src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
+              alt="Compro Seu Veículo" 
+              className="h-20 w-auto flex-shrink-0 max-w-none"
+            />
           </div>
           
           <div className="space-y-3 text-muted-foreground font-outfit">

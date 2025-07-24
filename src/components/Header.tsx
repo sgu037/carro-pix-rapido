@@ -9,9 +9,11 @@ const Header = () => {
               alt="718 Logo" 
               className="h-8 w-auto animate-float flex-shrink-0"
             />
-            <div className="text-2xl font-bold text-gradient font-outfit tracking-wide">
-              Compro $ Veículo
-            </div>
+            <img 
+              src="/lovable-uploads/dfe5c564-c1d6-4019-af00-cc53b710d2f2.png" 
+              alt="Compro Seu Veículo" 
+              className="h-16 w-auto flex-shrink-0 max-w-none"
+            />
           </div>
           <div className="hidden md:block text-sm text-muted-foreground font-outfit">
             Venda com segurança e rapidez
