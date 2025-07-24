@@ -26,6 +26,16 @@ const VehicleForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Aciona o evento Lead do Pixel
+    (window as any).fbq('track', 'Lead');
+    
+    // Chama API de conversão
+    fetch('/api/conversion', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: formData.whatsapp })
+    }).catch(console.error);
+    
     // Create WhatsApp message
     const message = `Olá! Gostaria de vender meu veículo:
     
@@ -42,8 +52,18 @@ Aguardo proposta!`;
     window.open(whatsappUrl, '_blank');
     
     toast({
-      title: "Redirecionando para WhatsApp",
+      title: "Obrigado! Sua avaliação foi enviada com sucesso.",
       description: "Você será redirecionado para enviar os dados pelo WhatsApp.",
+    });
+    
+    // Reset form
+    setFormData({
+      name: '',
+      whatsapp: '',
+      brand: '',
+      year: '',
+      plate: '',
+      mileage: ''
     });
   };
 
