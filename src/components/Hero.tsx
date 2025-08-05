@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
-import carHeroBg from "@/assets/car-front.jpg";
+import { CheckCircle } from "lucide-react";
+import manWithKeysImage from "@/assets/man-with-keys.png";
+import whiteSuvImage from "@/assets/white-suv.png";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -10,38 +12,56 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-hero px-4 overflow-hidden mt-8">
-      {/* Floating particles effect */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-2 h-2 bg-primary rounded-full animate-float"></div>
-        <div className="absolute top-40 right-32 w-1 h-1 bg-primary rounded-full animate-float" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-primary rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-      </div>
-      
-      <div 
-        className="glass p-4 md:p-12 rounded-2xl md:rounded-3xl max-w-5xl mx-auto text-center relative z-10 shadow-modern bg-cover bg-center bg-no-repeat min-h-[350px] sm:min-h-[400px] md:min-h-auto"
-        style={{ 
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${carHeroBg})`,
-          backdropFilter: 'blur(20px)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 30%'
-        }}
-      >
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 md:mb-8 font-outfit leading-tight md:leading-relaxed">
-          Venda seu carro com 
-          <span className="text-gradient block mt-1 md:mt-2 leading-tight md:leading-relaxed">segurança</span>
-        </h1>
-        <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12 font-outfit max-w-3xl mx-auto leading-relaxed px-2">
-          Receba via PIX em até 30 minutos. IPVA 2025 quitado. Sem leilão, sem sinistro.
-        </h2>
-        <Button 
-          variant="gold" 
-          size="xl" 
-          onClick={scrollToForm}
-          className="font-outfit text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-12 py-3 md:py-4 shadow-gold-glow hover:scale-105 transition-all duration-300"
-        >
-          QUERO VENDER AGORA
-        </Button>
+    <section className="relative min-h-screen bg-gradient-to-br from-background via-background to-accent/20 overflow-hidden">
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="z-10">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 font-outfit leading-tight">
+              Quer vender seu veículo?
+            </h1>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="text-primary w-6 h-6 flex-shrink-0" />
+                <span className="text-foreground font-outfit">Receba via PIX em até 30 minutos</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="text-primary w-6 h-6 flex-shrink-0" />
+                <span className="text-foreground font-outfit">IPVA 2025 quitado</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="text-primary w-6 h-6 flex-shrink-0" />
+                <span className="text-foreground font-outfit">Sem leilão, sem sinistro</span>
+              </div>
+            </div>
+            
+            <Button 
+              onClick={scrollToForm}
+              size="lg" 
+              className="text-lg px-8 py-6 rounded-xl shadow-gold-glow hover:shadow-gold-glow hover:scale-105 transition-all duration-300 font-outfit font-semibold bg-primary text-primary-foreground"
+            >
+              QUERO VENDER MEU CARRO
+            </Button>
+          </div>
+
+          {/* Right Content */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 blur-3xl"></div>
+            <div className="relative z-10 flex items-center justify-center">
+              <img 
+                src={whiteSuvImage} 
+                alt="Carro SUV" 
+                className="w-full max-w-md object-contain"
+              />
+              <img 
+                src={manWithKeysImage} 
+                alt="Homem com chaves" 
+                className="absolute right-0 top-0 w-48 md:w-64 object-contain"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

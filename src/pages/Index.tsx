@@ -1,8 +1,10 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import VehicleForm from "@/components/VehicleForm";
+import WhatWeDo from "@/components/WhatWeDo";
 import ProcessSteps from "@/components/ProcessSteps";
-import Highlights from "@/components/Highlights";
+import CallToAction from "@/components/CallToAction";
+import VehicleForm from "@/components/VehicleForm";
+import SocialProof from "@/components/SocialProof";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
@@ -11,9 +13,11 @@ const Index = () => {
     <div className="min-h-screen bg-background font-outfit">
       <Header />
       <Hero />
-      <VehicleForm />
+      <WhatWeDo />
       <ProcessSteps />
-      <Highlights />
+      <CallToAction />
+      <VehicleForm />
+      <SocialProof />
       <Footer />
       <WhatsAppFloat />
     </div>
