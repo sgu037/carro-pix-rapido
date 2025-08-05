@@ -50,16 +50,20 @@ const Hero = () => {
           <div className="relative animate-float">
             <div className="absolute inset-0 bg-gradient-primary rounded-full opacity-10 blur-3xl scale-110"></div>
             <div className="relative z-10 flex items-center justify-center">
-              <img 
-                src={whiteSuvImage} 
-                alt="Carro SUV" 
-                className="w-full max-w-lg object-contain drop-shadow-2xl"
-              />
-              <img 
-                src={manWithKeysImage} 
-                alt="Homem com chaves" 
-                className="absolute right-0 top-0 w-48 md:w-64 object-contain drop-shadow-xl"
-              />
+              <div className="relative">
+                <img 
+                  src={whiteSuvImage} 
+                  alt="Carro SUV" 
+                  className="w-full max-w-lg md:max-w-xl object-contain drop-shadow-2xl"
+                />
+                <div className="absolute -top-4 -right-4 md:-top-8 md:-right-8">
+                  <img 
+                    src={manWithKeysImage} 
+                    alt="Homem com chaves" 
+                    className="w-32 md:w-48 lg:w-56 object-contain drop-shadow-xl"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
