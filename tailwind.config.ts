@@ -58,21 +58,20 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-glass': 'var(--gradient-glass)',
 			},
 			boxShadow: {
-				'elegant': 'var(--shadow-elegant)',
-				'primary': 'var(--shadow-primary)',
-				'soft': 'var(--shadow-soft)',
+				'modern': 'var(--shadow-modern)',
+				'gold-glow': 'var(--shadow-gold-glow)',
+				'glass': 'var(--shadow-glass)',
 			},
 			backdropBlur: {
 				'glass': '20px',
 			},
 			animation: {
 				'float': 'float 3s ease-in-out infinite',
-				'pulse-elegant': 'pulse-elegant 2s ease-in-out infinite',
-				'slide-up': 'slide-up 0.6s ease-out',
+				'glow': 'glow 2s ease-in-out infinite alternate',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -101,8 +100,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'pulse-elegant': 'pulse-elegant 2s ease-in-out infinite',
-				'slide-up': 'slide-up 0.6s ease-out',
+				'glow': 'glow 2s ease-in-out infinite alternate',
 			}
 		}
 	},
