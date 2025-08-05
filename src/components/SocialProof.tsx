@@ -18,7 +18,7 @@ const SocialProof = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-4 bg-muted/30">
+    <section className="py-16 md:py-24 px-4 section-gradient">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Phone Mockup */}
@@ -26,49 +26,49 @@ const SocialProof = () => {
             <img 
               src={phoneMockupImage} 
               alt="App no celular" 
-              className="w-64 md:w-80 mx-auto lg:mx-0 object-contain"
+              className="w-64 md:w-80 mx-auto lg:mx-0 object-contain animate-float"
             />
           </div>
 
           {/* Right - Content */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-outfit mb-4">
-              Visite nossas redes sociais e avaliações do Google
+          <div className="animate-slide-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground font-outfit mb-6">
+              Visite nossas <span className="text-gradient">redes sociais</span> e avaliações do Google
             </h2>
-            <p className="text-lg text-muted-foreground font-outfit mb-8">
+            <p className="text-xl text-muted-foreground font-outfit mb-10">
               É com orgulho que divulgamos nossos feedbacks!
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-6 mb-10">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-background/80 p-6 rounded-xl border border-border/30 shadow-sm">
-                  <div className="flex items-center gap-2 mb-3">
-                    <img src="https://www.google.com/favicon.ico" alt="Google" className="w-5 h-5" />
+                <div key={index} className="bg-card p-6 rounded-xl border border-border/30 shadow-soft hover:shadow-elegant transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <img src="https://www.google.com/favicon.ico" alt="Google" className="w-6 h-6" />
                     <div className="flex">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
                   </div>
-                  <p className="text-foreground font-outfit text-sm italic">
+                  <p className="text-foreground font-outfit text-base leading-relaxed">
                     "{testimonial.text}"
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="flex items-center gap-4 mt-8">
-              <div className="flex items-center gap-2">
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2 p-3 bg-card rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer">
                 <img src="https://www.facebook.com/favicon.ico" alt="Facebook" className="w-6 h-6" />
+                <span className="font-outfit font-medium text-foreground">Facebook</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 p-3 bg-card rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer">
                 <img src="https://www.instagram.com/favicon.ico" alt="Instagram" className="w-6 h-6" />
+                <span className="font-outfit font-medium text-foreground">Instagram</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 p-3 bg-card rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer">
                 <img src="https://www.google.com/favicon.ico" alt="Google" className="w-6 h-6" />
-              </div>
-              <div className="flex items-center gap-2">
-                <img src="/lovable-uploads/4aedadf1-0584-4f49-a3b9-6543044be4ec.png" alt="WhatsApp" className="w-6 h-6" />
+                <span className="font-outfit font-medium text-foreground">Google</span>
               </div>
             </div>
           </div>

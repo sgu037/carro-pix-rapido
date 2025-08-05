@@ -7,18 +7,18 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-4">
+    <section className="py-16 md:py-24 px-4 bg-card">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground font-outfit mb-4">
-          Vamos ao passo 1
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground font-outfit mb-6">
+          Vamos ao <span className="text-gradient">passo 1</span>
         </h2>
-        <p className="text-lg text-muted-foreground font-outfit mb-8">
-          Clique abaixo para enviar as informações
+        <p className="text-xl text-muted-foreground font-outfit mb-10 max-w-2xl mx-auto">
+          Clique abaixo para enviar as informações do seu veículo
         </p>
         
         <button 
           onClick={scrollToForm}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-xl font-outfit font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-gold-glow"
+          className="btn-primary text-primary-foreground px-12 py-6 rounded-xl font-outfit font-bold text-lg tracking-wide"
         >
           PREENCHER FORMULÁRIO
         </button>
