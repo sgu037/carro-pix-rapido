@@ -45,10 +45,23 @@ const VehicleForm = () => {
     } catch (error) {
       console.error('Erro ao enviar para backend:', error);
     }
+
+    // Criar mensagem para WhatsApp
+    const message = `Olá! Gostaria de avaliar meu veículo:
+
+Email: ${formData.email}
+Placa: ${formData.plate}
+Quilometragem: ${formData.mileage}
+Cidade: ${formData.city}
+
+Aguardo proposta!`;
+
+    const whatsappUrl = `https://wa.me/5551980104004?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
     
     toast({
       title: "Obrigado! Sua avaliação foi enviada com sucesso.",
-      description: "Entraremos em contato em breve.",
+      description: "Você será redirecionado para o WhatsApp.",
     });
     
     // Reset form
