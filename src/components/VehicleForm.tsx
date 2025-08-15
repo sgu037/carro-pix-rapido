@@ -49,7 +49,6 @@ const VehicleForm = () => {
     // Criar mensagem para WhatsApp
     const message = `Olá! Gostaria de avaliar meu veículo:
 
-Email: ${formData.email}
 Placa: ${formData.plate}
 Quilometragem: ${formData.mileage}
 Cidade: ${formData.city}
