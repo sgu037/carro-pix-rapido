@@ -27,10 +27,12 @@ const VehicleForm = () => {
     // Gera ID único
     const eventId = "lead_" + Date.now();
 
-    // Dispara evento no Pixel (só se estiver disponível)
-    if (typeof (window as any).fbq === 'function') {
-      (window as any).fbq('track', 'Lead', {
-        event_id: eventId
+    // Dispara evento no Pixel via GTM dataLayer (evita duplicação)
+    if (typeof (window as any).dataLayer !== 'undefined') {
+      (window as any).dataLayer.push({
+        'event': 'lead_conversion',
+        'event_id': eventId,
+        'email': formData.email
       });
     }
 
