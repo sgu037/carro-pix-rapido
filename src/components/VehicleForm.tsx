@@ -7,12 +7,10 @@ import { useToast } from "@/hooks/use-toast";
 const VehicleForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    whatsapp: '',
-    brand: '',
-    year: '',
+    email: '',
     plate: '',
-    mileage: ''
+    mileage: '',
+    city: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,40 +21,42 @@ const VehicleForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Aciona o evento Lead do Pixel
-    (window as any).fbq('track', 'Lead');
-    
-    // Create WhatsApp message
-    const message = `Olá! Gostaria de vender meu veículo:
-    
-Nome: ${formData.name}
-WhatsApp: ${formData.whatsapp}
-Marca/Modelo: ${formData.brand}
-Ano/Versão: ${formData.year}
-Placa: ${formData.plate}
-KM: ${formData.mileage}
+    // Gera ID único
+    const eventId = "lead_" + Date.now();
 
-Aguardo proposta!`;
+    // Dispara evento no Pixel
+    (window as any).fbq('track', 'Lead', {
+      event_id: eventId
+    });
 
-    const whatsappUrl = `https://wa.me/5551980104004?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    // Envia para backend (Vercel)
+    try {
+      await fetch('/api/conversao-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          event_id: eventId,
+          email: formData.email
+        })
+      });
+    } catch (error) {
+      console.error('Erro ao enviar para backend:', error);
+    }
     
     toast({
       title: "Obrigado! Sua avaliação foi enviada com sucesso.",
-      description: "Você será redirecionado para enviar os dados pelo WhatsApp.",
+      description: "Entraremos em contato em breve.",
     });
     
     // Reset form
     setFormData({
-      name: '',
-      whatsapp: '',
-      brand: '',
-      year: '',
+      email: '',
       plate: '',
-      mileage: ''
+      mileage: '',
+      city: ''
     });
   };
 
@@ -74,41 +74,18 @@ Aguardo proposta!`;
           </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <Input
-              name="name"
-              placeholder="Seu nome"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
-            />
-            <Input
-              name="whatsapp"
-              type="tel"
-              placeholder="Seu WhatsApp"
-              value={formData.whatsapp}
-              onChange={handleInputChange}
-              required
-              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
-            />
-            <Input
-              name="brand"
-              placeholder="Marca e modelo"
-              value={formData.brand}
-              onChange={handleInputChange}
-              required
-              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
-            />
-            <Input
-              name="year"
-              placeholder="Ano e versão"
-              value={formData.year}
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Seu email"
+              value={formData.email}
               onChange={handleInputChange}
               required
               className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
             />
             <Input
               name="plate"
-              placeholder="Placa"
+              placeholder="Placa do veículo (Exemplo: ABC1D23)"
               value={formData.plate}
               onChange={handleInputChange}
               required
@@ -116,9 +93,16 @@ Aguardo proposta!`;
             />
             <Input
               name="mileage"
-              type="number"
-              placeholder="KM atual"
+              placeholder="Quilometragem atual do veículo (Exemplo: 50 000 km)"
               value={formData.mileage}
+              onChange={handleInputChange}
+              required
+              className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
+            />
+            <Input
+              name="city"
+              placeholder="Em qual cidade você está localizado(a)? (Ex: Porto Alegre – RS)"
+              value={formData.city}
               onChange={handleInputChange}
               required
               className="glass border-border/30 text-foreground font-outfit h-12 rounded-xl"
