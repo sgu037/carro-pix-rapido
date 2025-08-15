@@ -27,10 +27,12 @@ const VehicleForm = () => {
     // Gera ID único
     const eventId = "lead_" + Date.now();
 
-    // Dispara evento no Pixel
-    (window as any).fbq('track', 'Lead', {
-      event_id: eventId
-    });
+    // Dispara evento no Pixel (só se estiver disponível)
+    if (typeof (window as any).fbq === 'function') {
+      (window as any).fbq('track', 'Lead', {
+        event_id: eventId
+      });
+    }
 
     // Envia para backend (Vercel)
     try {
